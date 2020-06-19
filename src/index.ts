@@ -39,6 +39,7 @@ import ChannelField from './Component/Symbolizer/Field/ChannelField/ChannelField
 import ChannelSelectionField from './Component/Symbolizer/Field/ChannelSelectionField/ChannelSelectionField';
 import CodeEditor from './Component/CodeEditor/CodeEditor';
 import ColorField from './Component/Symbolizer/Field/ColorField/ColorField';
+import ColorMapEditor from './Component/Symbolizer/ColorMapEditor/ColorMapEditor';
 import ColorMapEntryField from './Component/Symbolizer/Field/ColorMapEntryField/ColorMapEntryField';
 import ColorMapTypeField from './Component/Symbolizer/Field/ColorMapTypeField/ColorMapTypeField';
 import ComparisonFilter from './Component/Filter/ComparisonFilter/ComparisonFilter';
@@ -113,10 +114,12 @@ import { ConfigProvider } from 'antd';
 import de_DE from './locale/de_DE';
 import en_US from './locale/en_US';
 import es_ES from './locale/es_ES';
+import zh_CN from './locale/zh_CN';
 const locale = {
   de_DE,
   en_US,
   es_ES,
+  zh_CN,
 };
 
 export {
@@ -128,6 +131,7 @@ export {
   ChannelSelectionField,
   CodeEditor,
   ColorField,
+  ColorMapEditor,
   ColorMapEntryField,
   ColorMapTypeField,
   ComparisonFilter,
