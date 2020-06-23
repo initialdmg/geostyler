@@ -40,9 +40,11 @@ import { localize } from '../../LocaleWrapper/LocaleWrapper';
 import en_US from '../../../locale/en_US';
 import { CompositionContext, Compositions } from '../../CompositionContext/CompositionContext';
 import CompositionUtil from '../../../Util/CompositionUtil';
-import { Form } from 'antd';
+import { Collapse, Form } from 'antd';
 
 const _cloneDeep = require('lodash/cloneDeep');
+
+const Panel = Collapse.Panel;
 
 // i18n
 export interface MarkEditorLocale {
@@ -133,23 +135,27 @@ export class MarkEditor extends React.Component<MarkEditorProps, MarkEditorState
       <CompositionContext.Consumer>
         {(composition: Compositions) => (
           <div className="gs-mark-symbolizer-editor" >
-            {
-              this.wrapFormItem(
-                locale.wellKnownNameFieldLabel,
-                CompositionUtil.handleComposition({
-                  composition,
-                  path: 'MarkEditor.wellKnownNameField',
-                  onChange: this.onWellKnownNameChange,
-                  propName: 'wellKnownName',
-                  propValue: symbolizer.wellKnownName,
-                  defaultElement: <WellKnownNameField />
-                })
-              )
-            }
-            <WellKnownNameEditor
-              symbolizer={symbolizer}
-              onSymbolizerChange={onSymbolizerChange}
-            />
+            <Collapse bordered={false} defaultActiveKey={['1']}>
+              <Panel header="General" key="1">
+                {
+                  this.wrapFormItem(
+                    locale.wellKnownNameFieldLabel,
+                    CompositionUtil.handleComposition({
+                      composition,
+                      path: 'MarkEditor.wellKnownNameField',
+                      onChange: this.onWellKnownNameChange,
+                      propName: 'wellKnownName',
+                      propValue: symbolizer.wellKnownName,
+                      defaultElement: <WellKnownNameField />
+                    })
+                  )
+                }
+                <WellKnownNameEditor
+                  symbolizer={symbolizer}
+                  onSymbolizerChange={onSymbolizerChange}
+                />
+              </Panel>
+            </Collapse>
           </div>
         )}
       </CompositionContext.Consumer>
