@@ -61,6 +61,9 @@ const Panel = Collapse.Panel;
 
 // i18n
 export interface LineEditorLocale {
+  general?: string,
+  graphicStroke?: string,
+  graphicFill?: string,
   colorLabel?: string;
   widthLabel?: string;
   opacityLabel?: string;
@@ -242,7 +245,7 @@ export class LineEditor extends React.Component<LineEditorProps> {
             {(composition: Compositions) => (
                 <div className="gs-line-symbolizer-editor" >
                   <Collapse bordered={false} defaultActiveKey={['1']} onChange={(key: string) => (null)}>
-                    <Panel header="General" key="1">
+                    <Panel header={locale.general} key="1">
                       {
                         this.wrapFormItem(
                           locale.colorLabel,
@@ -340,7 +343,7 @@ export class LineEditor extends React.Component<LineEditorProps> {
                         )
                       }
                       </Panel>
-                      <Panel header="Graphic Stroke" key="2">
+                      <Panel header={locale.graphicStroke} key="2">
                         {
                           CompositionUtil.handleComposition({
                             composition,
@@ -358,7 +361,7 @@ export class LineEditor extends React.Component<LineEditorProps> {
                           })
                         }
                       </Panel>
-                      <Panel header="Graphic Fill" key="3">
+                      <Panel header={locale.graphicFill} key="3">
                         {
                           CompositionUtil.handleComposition({
                             composition,

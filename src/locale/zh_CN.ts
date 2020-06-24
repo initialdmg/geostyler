@@ -96,6 +96,8 @@ export default {
         rotateLabel: '旋转'
     },
     GsFillEditor: {
+        general: '通用',
+        graphicFill: '图形填充',
         fillOpacityLabel: '填充-不透明度',
         fillColorLabel: '填充-颜色',
         outlineColorLabel: '轮廓-颜色',
@@ -111,9 +113,13 @@ export default {
         iconTooltipLabel: '打开图库'
     },
     GsMarkEditor: {
+      general: '通用',
       wellKnownNameFieldLabel: '符号'
     },
     GsLineEditor: {
+        general: '通用',
+        graphicStroke: '图形画笔',
+        graphicFill: '图形填充',
         colorLabel: '颜色',
         widthLabel: '宽度',
         opacityLabel: '不透明度',
