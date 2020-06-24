@@ -96,6 +96,8 @@ export default {
         rotateLabel: 'Rotation'
     },
     GsFillEditor: {
+        general: 'General',
+        graphicFill: 'Graphic Fill',
         fillOpacityLabel: 'Fill-Opacity',
         fillColorLabel: 'Fill-Color',
         outlineColorLabel: 'Outline-Color',
@@ -111,9 +113,13 @@ export default {
         iconTooltipLabel: 'Open Gallery'
     },
     GsMarkEditor: {
+      general: 'General',
       wellKnownNameFieldLabel: 'Symbol'
     },
     GsLineEditor: {
+        general: 'General',
+        graphicStroke: 'Graphic Stroke',
+        graphicFill: 'Graphic Fill',
         colorLabel: 'Color',
         widthLabel: 'Width',
         opacityLabel: 'Opacity',

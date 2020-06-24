@@ -57,6 +57,8 @@ const Panel = Collapse.Panel;
 
 // i18n
 export interface FillEditorLocale {
+  general?: string;
+  graphicFill?: string;
   fillOpacityLabel?: string;
   fillColorLabel?: string;
   outlineColorLabel?: string;
@@ -196,7 +198,7 @@ export class FillEditor extends React.Component<FillEditorProps> {
         {(composition: Compositions) => (
           <div className="gs-fill-symbolizer-editor" >
             <Collapse bordered={false} defaultActiveKey={['1']}>
-              <Panel header="General" key="1">
+              <Panel header={locale.general} key="1">
                 {
                   this.wrapFormItem(
                     locale.fillColorLabel,
@@ -263,7 +265,7 @@ export class FillEditor extends React.Component<FillEditorProps> {
                   )
                 }
               </Panel>
-              <Panel header="Graphic Fill" key="2">
+              <Panel header={locale.graphicFill} key="2">
                 {
                   CompositionUtil.handleComposition({
                     composition,
