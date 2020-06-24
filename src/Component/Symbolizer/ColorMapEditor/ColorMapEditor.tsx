@@ -82,6 +82,7 @@ interface ColorMapEditorDefaultProps {
 export interface ColorMapEditorProps extends Partial<ColorMapEditorDefaultProps> {
   colorMap?: ColorMap;
   onChange?: (colorMap: ColorMap) => void;
+  hideTitle?: boolean;
 }
 
 export interface ColorMapEditorState {
@@ -95,7 +96,7 @@ export class ColorMapEditor extends React.Component<ColorMapEditorProps, ColorMa
   public static defaultProps: ColorMapEditorDefaultProps = {
     locale: en_US.GsColorMapEditor,
     colorRamps: {
-      GeoStyler: ['#E7000E', '#F48E00', '#FFED00', '#00943D', '#272C82', '#611E82'],
+      Default: ['#E7000E', '#F48E00', '#FFED00', '#00943D', '#272C82', '#611E82'],
       GreenRed: ['#00FF00', '#FF0000'],
       ...brewer
     }
@@ -330,6 +331,7 @@ export class ColorMapEditor extends React.Component<ColorMapEditorProps, ColorMa
     const {
       colorMap,
       colorRamps,
+      hideTitle,
       locale
     } = this.props;
 
@@ -355,7 +357,7 @@ export class ColorMapEditor extends React.Component<ColorMapEditorProps, ColorMa
           <Form.Item
             {...formItemLayout}
           >
-            <span>{locale.titleLabel}</span>
+            {!hideTitle && (<span>{locale.titleLabel}</span>)}
           </Form.Item>
           <Form.Item
             label={locale.typeLabel}

@@ -73,6 +73,7 @@ export interface RasterChannelEditorProps extends Partial<RasterChannelEditorDef
   onChange?: (channelSelection: ChannelSelection) => void;
   channelSelection?: ChannelSelection;
   contrastEnhancementTypes?: ContrastEnhancement['enhancementType'][];
+  hideTitle?: boolean;
 }
 
 interface RasterChannelEditorState {
@@ -185,6 +186,7 @@ export class RasterChannelEditor extends React.Component<RasterChannelEditorProp
       sourceChannelNames,
       channelSelection,
       contrastEnhancementTypes,
+      hideTitle,
       locale
     } = this.props;
 
@@ -219,7 +221,7 @@ export class RasterChannelEditor extends React.Component<RasterChannelEditorProp
         <Form.Item
           {...formItemLayout}
         >
-          <span>{locale.titleLabel}</span>
+          {!hideTitle && (<span>{locale.titleLabel}</span>)}
         </Form.Item>
         <Form.Item
           label={locale.channelSelectionLabel}
