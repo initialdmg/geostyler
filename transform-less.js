@@ -37,12 +37,17 @@ const replace = require('replace-in-file');
   const files = await readdirp.promise('dist', { fileFilter: '*.less' });
   files.forEach(file => {
     const out = file.fullPath.replace('.less', '.css');
-    const less = childProcess.fork('./node_modules/.bin/lessc', [file.fullPath, out]);
-    less.on('exit', function (code) {
+    const less = childProcess.execFile('node_modules\\.bin\\lessc.cmd', [file.fullPath, out], (err)=> {
+      if (err) { console.log(err); }
       fs.unlink(file.fullPath, (err) => {
         if (err) throw err;
       });
     });
+    // less.on('exit', function (code) {
+    //   fs.unlink(file.fullPath, (err) => {
+    //     if (err) throw err;
+    //   });
+    // });
   });
 })();
 

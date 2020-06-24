@@ -1,6 +1,6 @@
 {
   "name": "egova-geostyler",
-  "version": "4.5.0",
+  "version": "4.5.1-rc1",
   "description": "Framework for styling geodata",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -58,7 +58,6 @@
     "@types/react-dom": "^16.9.7",
     "@ungap/url-search-params": "^0.2.0",
     "blob": "^0.1.0",
-    "canvas": "^2.5.0",
     "chroma-js": "^2.0.3",
     "codemirror": "^5.53.2",
     "color": "^3.1.2",
@@ -94,6 +93,7 @@
     "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "^26.0.1",
     "babel-loader": "^8.1.0",
+    "canvas": "^2.5.0",
     "case-sensitive-paths-webpack-plugin": "^2.3.0",
     "copyfiles": "^2.2.0",
     "coveralls": "^3.1.0",
