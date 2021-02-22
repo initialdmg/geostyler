@@ -61,9 +61,9 @@ const Panel = Collapse.Panel;
 
 // i18n
 export interface LineEditorLocale {
-  general?: string,
-  graphicStroke?: string,
-  graphicFill?: string,
+  general?: string;
+  graphicStroke?: string;
+  graphicFill?: string;
   colorLabel?: string;
   widthLabel?: string;
   opacityLabel?: string;
