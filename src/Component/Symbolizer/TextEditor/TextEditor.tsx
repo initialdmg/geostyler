@@ -281,6 +281,7 @@ export class TextEditor extends React.Component<TextEditorProps> {
                       placeholder={locale.templateFieldLabel}
                       prefix="@"
                       split="`"
+                      rows={2}
                       notFoundContent={locale.attributeNotFound}
                     >
                       {properties.map(p => <MentionOption key={p} value={p}>{p}</MentionOption>)}
