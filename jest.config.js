@@ -38,7 +38,7 @@ module.exports = {
   ],
   "testMatch": [
     "<rootDir>/src/**/__tests__/**/*.(j|t)s?(x)",
-    "<rootDir>/src/**/?(*.)(spec|test).(j|t)s?(x)"
+    "<rootDir>/src/**/*(*.)(spec|test).(j|t)s?(x)"
   ],
   "testURL": "http://localhost",
   "transform": {
