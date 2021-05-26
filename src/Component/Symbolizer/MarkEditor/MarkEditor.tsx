@@ -48,6 +48,7 @@ const Panel = Collapse.Panel;
 
 // i18n
 export interface MarkEditorLocale {
+  general?: string;
   wellKnownNameFieldLabel: string;
 }
 
@@ -136,7 +137,7 @@ export class MarkEditor extends React.Component<MarkEditorProps, MarkEditorState
         {(composition: Compositions) => (
           <div className="gs-mark-symbolizer-editor" >
             <Collapse bordered={false} defaultActiveKey={['1']}>
-              <Panel header="General" key="1">
+              <Panel header={locale.general} key="1">
                 {
                   this.wrapFormItem(
                     locale.wellKnownNameFieldLabel,
