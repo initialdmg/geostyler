@@ -37,6 +37,7 @@ import {
     LineSymbolizer
 } from 'geostyler-style';
 
+import { localize } from '../../../LocaleWrapper/LocaleWrapper';
 import en_US from '../../../../locale/en_US';
 
 // i18n
@@ -67,6 +68,8 @@ export class LineJoinField extends React.Component<LineJoinFieldProps> {
     locale: en_US.GsLineJoinField,
     joinOptions: ['miter', 'round', 'bevel']
   };
+
+  static componentName: string = 'LineJoinField';
 
   getJoinSelectOptions = () => {
     const { joinOptions, locale } = this.props;
@@ -100,4 +103,4 @@ export class LineJoinField extends React.Component<LineJoinFieldProps> {
   }
 }
 
-export default LineJoinField;
+export default localize(LineJoinField, LineJoinField.componentName);

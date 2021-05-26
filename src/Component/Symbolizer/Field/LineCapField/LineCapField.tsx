@@ -37,6 +37,7 @@ import {
     LineSymbolizer
 } from 'geostyler-style';
 
+import { localize } from '../../../LocaleWrapper/LocaleWrapper';
 import en_US from '../../../../locale/en_US';
 
 // i18n
@@ -67,6 +68,8 @@ export class LineCapField extends React.Component<LineCapFieldProps> {
     locale: en_US.GsLineCapField,
     capOptions: ['butt', 'round', 'square']
   };
+
+  static componentName: string = 'LineCapField';
 
   getCapSelectOptions = () => {
     const { capOptions, locale } = this.props;
@@ -100,4 +103,4 @@ export class LineCapField extends React.Component<LineCapFieldProps> {
   }
 }
 
-export default LineCapField;
+export default localize(LineCapField, LineCapField.componentName);
