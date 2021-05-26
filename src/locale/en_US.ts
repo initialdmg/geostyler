@@ -338,5 +338,15 @@ export default {
     GsIconSelector: {
         librarySelectLabel: 'Select Library'
     },
+    GsLineJoinField: {
+      bevel: 'bevel',
+      round: 'round',
+      miter: 'miter'
+    },
+    GsLineCapField: {
+      butt: 'butt',
+      round: 'round',
+      square: 'square'
+    },
     ...en_US
 };

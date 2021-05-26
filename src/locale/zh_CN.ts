@@ -338,5 +338,15 @@ export default {
     GsIconSelector: {
         librarySelectLabel: '选择图标库'
     },
+    GsLineJoinField: {
+      miter: '尖头(直角)连接',
+      round: '圆头(圆角)连接',
+      bevel: '平头(半角)连接'
+    },
+    GsLineCapField: {
+      butt: '平端头',
+      round: '圆端头',
+      square: '方端头'
+    },
     ...zh_CN
 };
