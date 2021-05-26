@@ -51,7 +51,7 @@ export class FontPicker extends React.Component<FontPickerProps> {
 
   public static defaultProps: FontPickerDefaultProps = {
     fontOptions: [
-      'Times', 'Arial', 
+      'Times', 'Arial',
       'Sans-serif', 'Times New Roman',
       'Monospace', 'Serif',
       '微软雅黑', '宋体', '黑体', '楷体',
